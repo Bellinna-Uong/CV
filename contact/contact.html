@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="sidebar">
+        <nav class="nav">
+            <a href="/Resume/index.html"><div class="element"><img src="/Resume/icon/index.png" alt=""></div></a>
+            <a href="/Resume/skill/skill.html"><div class="element"><img src="/Resume/icon/skill.png" alt=""></div></a>
+            <a href="/Resume/training/train.html"><div class="element"><img src="/Resume/icon/train.png" alt=""></div></a>
+            <a href="/Resume/plus/plus.html"><div class="element"><img src="/Resume/icon/achiev.png" alt=""></div></a>
+            <a href="/Resume/contact/contact.html"><div class="element"><img src="/Resume/icon/contact.png" alt=""></div></a>
+        </nav>
+    </div>
+    <div class="wrapper centered">
+        <form action="https://formspree.io/f/mgvwglrp" method="POST" class="letter">
+            <div class="side">
+                <h1>Let's get on an adventure together!</h1>
+                <p>
+                    <textarea name="message" placeholder="Your message" required></textarea>
+                </p>
+            </div>
+            <div class="side">
+                <p>
+                    <input type="text" name="name" placeholder="Your name" required>
+                </p>
+                <p>
+                    <input type="email" name="email" placeholder="Your email" required>
+                </p>
+                <p>
+                    <button type="button" id="sendLetter">Send</button>
+                </p>
+            </div>
+        </form>
+        <div class="envelope front"></div>
+        <div class="envelope back"></div>
+    </div>
+    <p class="result-message centered">Thank you for your letter</p>
+
+    <script src="contact.js"></script>
+</body>
+</html>
