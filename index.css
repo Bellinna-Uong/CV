@@ -1,0 +1,471 @@
+/*--------------------- IMPORT ------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Rozha+One&display=swap');
+
+/*--------------------ROOT----------------*/
+:root {
+    --dark-green :#4D5B5B;
+    --mulberry :#BF5A84;
+    --shadow-mulberry:#7d5062;
+    --pale-purple: #F5DFEB;
+    --very-pale-pink: #FCF0F7;
+    --light-green:#9AA79E;
+    --dark-red:#802A47;
+    --cream-white : #fffcfc;
+
+    --radius-bigcard : 35px;
+    --radius-smallcard : 15px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--pale-purple);
+}
+
+
+/*--------------WRTITE-------------*/
+h1 {
+    font-family: "Rozha One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.8rem;
+    color : white;
+    margin-top: 14px;
+    margin-bottom:0;
+}
+
+h2 {
+    font-family: "Rozha One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    color : white;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+h3 {
+    font-family: "Rozha One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.9rem;
+    color : var(--dark-green);
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+p {
+    font-size: 1.2rem;
+    color : white;
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.9rem;
+}
+
+
+/*------------------HOME TOP----------------*/
+.welcome {
+    margin: 0;
+    margin-bottom: 3rem;
+    background-image: url('output4.jpg');
+    background-size: cover; 
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.welcome .container {
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+
+.welcome .container .begining p {
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.name {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20rem; 
+    margin: 0;
+    padding: 0;
+    height: 2rem;
+    position: absolute;
+    transform: translate(0, -7.5rem);
+}
+
+/*------------------INTRO-ME-----------------*/
+.intro-me .container {
+    background: var(--mulberry);
+    margin: 4rem;
+    padding: 2rem;
+    border: 2px solid var(--mulberry);
+    border-radius: var(--radius-bigcard);
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 7px 7px var(--dark-red), -1em 0 .4em var(--shadow-mulberry);
+}
+
+.intro-me .text {
+    width: 55%;
+}
+
+.intro-me .pic-intro {
+    width: 45%;
+    height: auto; 
+    display: flex;
+    justify-content: center;
+}
+
+.intro-me img{
+    width: 55%;
+    height: auto;
+}
+
+.intro-me p{
+    margin-top: 1rem;
+    line-height: 2.5rem;
+}
+
+/*------------CONTACT-----------*/
+
+button {
+    font-family: inherit;
+    font-size: 20px;
+    background: var(--dark-green);
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  
+  button span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  button:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+  }
+  
+  button:hover svg {
+    transform: translateX(1.9em) rotate(45deg) scale(1.1);
+  }
+  
+  button:hover span {
+    transform: translateX(5em);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  @keyframes fly-1 {
+    from {
+      transform: translateY(2px);
+    }
+  
+    to {
+      transform: translateY(-2px);
+    }
+  }
+  
+
+
+/*-------------INFO--------*/
+.info {
+    display: flex;
+    margin-left:4rem;
+}
+
+.info .my-info, .info .media , .info .plus {
+    margin-left: 2.5rem;
+}
+
+.info .avatar {
+    width: 25%;
+
+}
+
+.info .pic-avatar {
+    display: flex;
+    justify-content: center;
+}
+
+.info .avatar img {
+    width: 85%;
+    height: auto;
+}
+
+.info .pic-avatar {
+    background: var(--very-pale-pink);
+    margin : 1rem;
+    border : 2px solid var(--very-pale-pink);
+    border-radius: var(--radius-smallcard);
+}
+
+.my-info {
+    width : 20%;
+}
+.my-info .num {
+    background: var(--dark-green);
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+    border: 2px solid var(--dark-green);
+    border-radius: var(--radius-smallcard);
+}
+
+.my-info .adress {
+    background: var(--light-green);
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+    border: 2px solid var(--light-green);
+    border-radius: var(--radius-smallcard);
+}
+
+.my-info .city {
+    background : var(--mulberry);
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+    border: 2px solid var(--mulberry);
+    border-radius: var(--radius-smallcard);
+}
+
+.my-info .country {
+    background: var(--dark-red);
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+    border: 2px solid var(--dark-red);
+    border-radius: var(--radius-smallcard);
+}
+
+.media {
+    width: 10%;
+    height: 12vh;
+    display: grid;
+    justify-content: center;
+}
+
+.media .pic1:hover, .media .pic2:hover, .box1:hover, .box2:hover, .box3:hover{
+    scale:1.05;
+}
+
+.media .pic1, .media .pic2 {
+    background-color: var(--light-green);
+    border-radius: var(--radius-smallcard);
+    margin-bottom: 3rem;
+    padding-top: 0.5rem;
+    transition:0.3s;
+
+}
+
+.media .pic2 {
+    background-color: var(--dark-red);
+    padding-top: 0.8rem;
+}
+
+.media img {
+    width: 100%;
+    height: auto;
+}
+
+.circle1, .circle2 {
+    width: 35px;
+    height: 35px; 
+    background-color: var(--cream-white); 
+    border-radius: 50%;
+    position: absolute;
+}
+
+.X1 , .X2 {
+    color: black;
+    position: absolute;
+}
+
+.X1 p {
+    transform: translate(-4px, -40px);
+    color: black;
+}
+
+.circle1{
+    transform: translate(-1rem, -24px);
+
+}
+
+.X2 p {
+    transform: translate(-4px, -40px);
+    color: black;
+}
+
+
+.circle2 {
+    transform: translate(-1rem, -24px);
+}
+
+
+.plus {
+    width: 23%;
+}
+
+.box1, .box2, .box3 {
+    background: var(--very-pale-pink);
+    border: 2px solid var(--very-pale-pink);
+    border-radius: var(--radius-smallcard);
+    margin-bottom: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    transition: 0.3s;
+}
+
+.plus p {
+    color: var(--dark-red);
+    text-align: center;
+}
+
+/*---------MEDIA--------*/
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 1.3rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    h3 {
+        font-size: 0.9rem;
+    }
+    p{
+        font-size: 0.5rem;
+        line-height: 0.5rem;
+    }
+
+    .welcome .name {
+        gap: 10px ;
+    }
+
+    .welcome .container .begining p {
+        font-size: 0.6rem;
+    }
+    .intro-me .container {
+        margin:0;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        border-radius: 0;
+
+    }
+
+    .intro-me p {
+        margin-top: 5px;
+        line-height: 1rem;
+    }
+
+    .intro-me .pic-intro {
+        align-items: center;
+    }
+
+    .intro-me img {
+        width: 55%;
+        height: 55%;
+        object-fit: contain;
+    }
+
+    button {
+        font-size: 10px;
+        padding: 0.3em 0.7em;
+        padding-left: 0.4em;
+    }
+
+    .info {
+        display: block;
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+
+    .info .avatar , .my-info , .media , .plus{
+        width: 100%;
+        margin-left:0;
+    }
+
+    .info .my-info, .info .media , .info .plus {
+        margin-left: 0rem;
+    }
+
+    .info .avatar img {
+        width: 40%;
+        object-fit: contain;
+    }
+
+    .my-info .num, .my-info .adress, .my-info .city, .my-info .country {
+        border-radius: 0;
+    }
+
+    .media {
+        display: flex;
+        height: fit-content;
+        justify-content: center;
+    }
+
+    .media .pic1, .media .pic2 {
+        background-color: var(--very-pale-pink);
+        border-radius: 0;
+        margin-bottom: 3rem;
+        padding-top: 0.5rem;
+        transition:0.3s;
+        display: flex;
+        justify-content: center;
+    }
+
+    .media .pic2 {
+        padding-top: 0.8rem;
+    }
+
+    .media img {
+        width: 30%;
+        object-fit: contain;
+    }
+
+    .circle1, .circle2, .X1, .X2{
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .intro-me img {
+        width: 55%;
+        height: 55%;
+        object-fit: contain;
+    }
+} 
