@@ -1,0 +1,250 @@
+/*--------------------- IMPORT ------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Rozha+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+/*--------------------ROOT----------------*/
+:root {
+    --dark-green :#4D5B5B;
+    --mulberry :#BF5A84;
+    --shadow-mulberry:#7d5062;
+    --pale-purple: #F5DFEB;
+    --dark-purple: #DBC3D6;
+    --light-green:#9AA79E;
+    --dark-red:#802A47;
+    --cream-white : #fffcfc;
+
+    --radius-bigcard : 35px;
+    --radius-smallcard : 15px;
+}
+
+body {
+    margin: 2rem;
+    padding: 0;;
+    background: var(--pale-purple);
+}
+
+
+/*--------------WRTITE-------------*/
+h1 {
+    font-family: "Rozha One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.8rem;
+    color : white;
+    margin-top: 14px;
+    margin-bottom:0;
+}
+
+h2 {
+    font-family: "Rozha One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    color : white;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+h3 {
+    font-family: "Rozha One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.9rem;
+    color : var(--dark-green);
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+
+p {
+    font-size: 1.5rem;
+    color : white;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 3rem;
+}
+
+/*--------------COMPANION-----------*/
+.companion .container {
+    background: var(--dark-purple);
+    padding : 1rem 1rem 2rem 1rem;
+    border-radius: var(--radius-bigcard);
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    position: relative;
+}
+
+
+.card {
+    position: relative;
+    width: 150px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: var(--radius-smallcard);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: transform 0.4s ease-in-out;
+    background: var(--cream-white);
+    border: 2px solid var(--dark-red);
+    margin-left: -2rem; 
+    z-index: 1;
+
+}
+
+.card img {
+    width: auto;
+    height: 85%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+}
+
+.card:hover {
+    z-index: 10;
+    transform: scale(1.03);
+}
+
+
+
+/*--------------WEAPON------------*/
+.weapon {
+    margin-top: 4rem;
+    padding: 1rem 1rem 2rem 1rem;
+}
+
+.weapon .container {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    margin-top: 1.5rem;
+}
+
+.weapon .ability, 
+.weapon .langue {
+    background: var(--dark-green);
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    padding: 1rem; 
+    border-radius: var(--radius-bigcard);
+    background: var(--mulberry);
+    filter: blur(4px);
+    transition: 0.4s ease; 
+}
+
+.weapon .langue {
+    background: var(--dark-green);
+}
+
+.weapon .ability:hover, 
+.weapon .langue:hover {
+    filter: blur(0);
+    scale:1.04;
+}
+
+
+/*---------MEDIA---------*/
+@media (max-width: 768px) {
+    h1{
+      font-size: 1.3rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+
+    h3{
+        font-size: 1.4rem;
+    }
+
+    .card {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .card img {
+        width: 110%;
+        height: auto;
+    }
+
+    .companion .container {
+        background: var(--dark-purple);
+        padding : 1rem;
+        border-radius: var(--radius-bigcard);
+    }
+
+    .weapon .container {
+        display: grid;
+    }
+
+    .weapon .ability, 
+    .weapon .langue {
+        width: 100%;
+        gap:0;
+    }
+
+  }
+
+
+  /*-------------------------SIDE BAR----------------*/
+  .sidebar {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-right: 2rem;
+    width: 40px;
+    height: auto; 
+    background-color: transparent; 
+    padding: 0.8rem;
+    border: 2px solid var(--mulberry);
+    border-radius: 4rem;
+    z-index: 1000; 
+}
+
+
+.sidebar nav {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav .nav {
+    justify-items: center;
+    display: flex;
+}
+
+.sidebar .element {
+    width: 40px;
+    height:40px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+.sidebar .element img{
+    width: 32px;
+
+}
+
+.sidebar .element:hover{
+    background: var(--light-green);
+    border: 1px solid var(--light-green);
+    transform:scale(1.15);
+}
